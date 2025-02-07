@@ -2,29 +2,145 @@
 <html lang="sv">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BRF Hinden</title>
-    <link rel="stylesheet" href="styles.css">
-    <script defer src="scripts.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>BRF Hinden - Lindesberg</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #ffffff;
+            color: #000000;
+        }
+        .navbar {
+            background-color: #ffffff;
+            height: 10vh;
+            position: sticky;
+            top: 0;
+            z-index: 1030;
+            border-bottom: 1px solid #ddd;
+        }
+        .navbar .nav-link {
+            color: #000000 !important;
+        }
+        .navbar .nav-link:hover {
+            color: #555555 !important;
+        }
+        .navbar .dropdown-icon {
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 1.2rem;
+            color: #000000;
+        }
+        header {
+            height: 90vh;
+        }
+        header .position-absolute {
+            background-color: rgba(0, 0, 0, 0.7);
+            color: #ffffff;
+            padding: 1rem 2rem;
+        }
+        h2, h3 {
+            color: #000000;
+        }
+        h1 {
+            color: #ffffff;
+        }
+        section {
+            background-color: #ffffff;
+            color: #000000;
+        }
+        section.bg-light {
+            background-color: #ffffff;
+        }
+        footer {
+            background-color: #ffffff;
+            color: #000000;
+        }
+    </style>
 </head>
 <body>
-<header>
-    <h1>Välkommen till BRF Hinden</h1>
-</header>
-<nav>
-    <ul>
-        <li><a href="#startsida" class="menu-link">Startsida</a></li>
-        <li><a href="#kontakt" class="menu-link">Kontakt</a></li>
-        <li><a href="#styrelsen" class="menu-link">Styrelsen</a></li>
-        <li><a href="#om-foreningen" class="menu-link">Om föreningen</a></li>
-        <li><a href="#utveckling" class="menu-link">Utveckling</a></li>
-    </ul>
-</nav>
-<div id="content">
-    <!-- Dynamiskt innehåll laddas här -->
-</div>
-<footer>
-    <p>© 2025 BRF Hinden. Alla rättigheter förbehållna.</p>
-</footer>
+    <header class="position-relative">
+        <img src="https://kadesjos.se/assets/bilder/Nyheter/_1152xAUTO_fit_center-center_80_none/yllefabriken-byggnad2-beskuren.webp" alt="Hus" class="img-fluid w-100 h-100" style="object-fit: cover;">
+        <div class="position-absolute top-50 start-50 translate-middle text-white text-center rounded">
+            <h1>Välkommen till BRF Hinden</h1>
+            <p>En trygg och trivsam bostadsrättsförening i Lindesberg</p>
+        </div>
+    </header>
+
+    <nav class="navbar navbar-expand-lg">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="#home">Startsida</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#kontakt">Kontakt</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#styrelsen">Styrelsen</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#om-foreningen">Om föreningen</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#utveckling">Utveckling</a></li>
+                </ul>
+            </div>
+            <span class="dropdown-icon">▼</span>
+        </div>
+    </nav>
+
+    <section id="home" class="py-5">
+        <div class="container">
+            <h2 class="text-center">Startsida</h2>
+            <p class="text-center">Välkommen till BRF Hinden! Här hittar du information om vår förening och aktuella nyheter.</p>
+        </div>
+    </section>
+
+    <section id="kontakt" class="py-5">
+        <div class="container">
+            <h2 class="text-center">Kontakt</h2>
+            <p class="text-center">Har du frågor? Fyll i formuläret nedan.</a></p>
+            <form action="https://formspree.io/f/xkgozrgo" method="POST" class="mt-4">
+                <div class="mb-3">
+                    <label for="name" class="form-label">Namn</label>
+                    <input type="text" class="form-control" id="name" name="name" required>
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">E-post</label>
+                    <input type="email" class="form-control" id="email" name="email" required>
+                </div>
+                <div class="mb-3">
+                    <label for="message" class="form-label">Meddelande</label>
+                    <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Skicka</button>
+            </form>
+        </div>
+    </section>
+
+    <section id="styrelsen" class="py-5">
+        <div class="container">
+            <h2 class="text-center">Styrelsen</h2>
+            <p class="text-center">Här finner du information om vår styrelse och dess medlemmar.</p>
+        </div>
+    </section>
+
+    <section id="om-foreningen" class="py-5">
+        <div class="container">
+            <h2 class="text-center">Om föreningen</h2>
+            <p class="text-center">Läs mer om BRF Hinden och vår historia samt hur vi arbetar för en bättre boendemiljö.</p>
+        </div>
+    </section>
+
+    <section id="utveckling" class="py-5">
+        <div class="container">
+            <h2 class="text-center">Utveckling</h2>
+            <p class="text-center">Här kan du läsa om våra pågående och framtida utvecklingsprojekt inom föreningen.</p>
+        </div>
+    </section>
+
+
+    <footer class="text-center">
+        <p>© 2025 BRF Hinden Lindesberg</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
